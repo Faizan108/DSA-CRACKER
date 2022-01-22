@@ -3,29 +3,37 @@ import java.util.*;
 public class union {
 	public static void union1(int arr[],int ar[],int n1,int n2)
 	{
-	int i=0,j=0;
+		int n=n1+n2;
+		int a[]=new int[n];
+	int i=0,j=0,k=0;
 	while(i<n1&&j<n2)
 	{
 		if(arr[i]<ar[j]) {
-			System.out.println(arr[i++]);
+			a[k++]=arr[i++];
 		}
 		else if(ar[j]<arr[i])
 		{
-			System.out.print(ar[j++]+" ");
+			a[k++]=ar[j++];
 		}
 		else {
 			
-			System.out.print(ar[j++]+" ");
+			a[k++]=ar[j++];
 			i++;
+			
+			
 		}
 	}
 	while(i<n1)
 	{
-		System.out.print(arr[i++]+" ");
+		a[k++]=arr[i++];
 	}
 	while(j<n2)
 	{
-		System.out.print(ar[j++]+" ");
+		a[k++]=ar[j++];
+	}
+	for(int v=0;v<k;v++)
+	{
+		System.out.print(a[v]+" ");
 	}
 	System.out.println();
 	}
@@ -74,7 +82,7 @@ public class union {
 		ar[k]=in.nextInt();
 	}
 	union1(arr,ar,n1,n2);
-	intersection(arr,ar,n1,n2);
+	//intersection(arr,ar,n1,n2);
 	}
 	
 

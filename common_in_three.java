@@ -49,22 +49,59 @@ public class common_in_three {
 			C[i]=in.nextInt();
 		}
 		ArrayList<Integer> li=new ArrayList<Integer>();
-        for(int i=0;i<n1;i++)
+		ArrayList<Integer> li1=new ArrayList<Integer>();
+//        for(int i=0;i<n1;i++)
+//        {
+//            if(binary(A[i],B,n2))
+//            {
+//                if(binary(A[i],C,n3))
+//                {
+//                    if(!li.contains(A[i]))
+//                    {
+//                    li.add(A[i]);
+//                    }
+//                }
+//            }
+//        }
+		int x=0;
+		int y=0;
+		int z=0;
+		while(x<n1&&y<n2)
+		{
+			if(A[x]>B[y])
+			{
+				y++;
+			}
+			else if(A[x]<A[y])
+			{
+				x++;
+			}
+			else {
+				li.add(B[y++]);
+				x++;
+			}
+		}
+		
+		System.out.println();
+		x=0;
+		while(z<n3&&x<li.size())
+		{
+			if(li.get(x)>C[z])
+			{
+				z++;
+			}
+			else if(li.get(x)<C[z])
+			{
+				x++;
+			}
+			else {
+				li1.add(C[z++]);
+				x++;
+			}
+		}
+        for(int i=0;i<li1.size();i++)
         {
-            if(binary(A[i],B,n2))
-            {
-                if(binary(A[i],C,n3))
-                {
-                    if(!li.contains(A[i]))
-                    {
-                    li.add(A[i]);
-                    }
-                }
-            }
-        }
-        for(int i=0;i<li.size();i++)
-        {
-        	System.out.print(li.get(i)+" ");
+        	System.out.print(li1.get(i)+" ");
         }
 
 	}
