@@ -34,13 +34,14 @@ public static int[] sort(int arr[],int lb,int ub)
 			if(arr[i]>arr[i-1])
 			{
 				int k=i;
-				while(k<n-1)
+				while(k<=n-1)
 				{
-					if(arr[i-1]<=arr[k])
+					if(arr[i-1]<arr[k])
 					{
 						k++;
 					}
 				}
+				
 				k--;
 				l=1;
 				int t=arr[i-1];
@@ -51,6 +52,7 @@ public static int[] sort(int arr[],int lb,int ub)
 				
 			}
 		}
+		
 		if(l==0)
 		{
 			Arrays.sort(arr);
