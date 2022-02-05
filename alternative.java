@@ -1,13 +1,6 @@
 package dsa;
 import java.util.*;
 public class alternative {
-	public static void print(int output[])
-	{
-	    for(int i=0;i<output.length;i++)
-	    {
-	        System.out.print(output[i]+" ");
-	    }
-	}
 	public static void rotate(int nums[],int start, int end)
 	{
 	    int temp=nums[end];
