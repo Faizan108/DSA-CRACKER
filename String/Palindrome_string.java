@@ -25,6 +25,7 @@ class Palindrome_string {
         else{
             System.out.println(0);
         }
+        in.close();
      }
     }
 
